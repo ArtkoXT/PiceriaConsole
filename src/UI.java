@@ -9,10 +9,12 @@ public class UI {
 		List<Preke> prekes = Asortimentas.getInstance().getAll();
 		
 		prekes.forEach( item -> System.out.println(    
-					String.format( "%d - %-20s kaina : %.2f"  , 
+					String.format( "%d - %-20s kaina : %.2f" -%s , 
 							item.id(),
 							item.name(),
-							BL.getSalePrice(item.price())) 
+							BL.getSalePrice(item.price()),
+						        item.getDescription())
+
 				));
 
 	}
